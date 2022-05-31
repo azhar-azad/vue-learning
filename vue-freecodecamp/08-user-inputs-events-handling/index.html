@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js Instance</title>
+    <!-- Font-Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- VueJS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!--    <script type="text/javascript" src="vue.js"></script>-->
+</head>
+
+<body>
+    <h1>Vue Example</h1>
+    <div id="app">
+
+<!--        user-inputs-event-handling-->
+        <div class="projects" v-for="(project, index) in projects">
+            <h1>{{ project.title.toUpperCase() }}</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <div>
+                Like <i @click="likeProject(index, $event)"
+                    class="fas fa-heart fa-lg fa-fw"></i>
+                {{ projects.likes }}
+            </div>
+        </div>
+
+        <!-- Users can like a project with a left click and dislike it with right click -->
+        <div class="projects" v-for="project in projects">
+            <h1>{{ project.title.toUpperCase() }}</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <div>
+                Like <i class="fas fa-heart fa-lg fa-fw"
+                        @click.left="addLike(project)"
+                        @click.right="removeLike(project, $event)"></i>
+                {{ projects.likes }}
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

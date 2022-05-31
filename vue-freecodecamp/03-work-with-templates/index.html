@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js Instance</title>
+    <!-- VueJS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
+</head>
+
+<body>
+    <h1>Vue Example</h1>
+    <div id="app">
+        <div class="title">{{ titleHTML }}</div>
+        <div v-html="titleHTML"></div>
+    </div>
+
+    <script src="./main.js"></script>
+    <script>
+      // Access the alert property in the data object
+      console.log(app.alert)
+      // update a data property value
+      app.alert = "I am a new alert message"
+      console.log(app.alert)
+      console.log(app.projects)
+
+      // Access the entrie data object
+      console.log(app._data)
+      console.log(app.$data)
+
+
+
+    </script>
+</body>
+
+</html>

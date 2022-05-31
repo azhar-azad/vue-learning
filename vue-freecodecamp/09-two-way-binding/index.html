@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJs v-model</title>
+    <!-- Bootstrap CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Font-Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- VueJS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!--    <script type="text/javascript" src="vue.js"></script>-->
+</head>
+
+<body>
+    <h1>Vue Example</h1>
+    <div id="app" class="container">
+
+        <h2>What do you want to tweet about today?</h2>
+
+        <!-- Tweet form -->
+        <form @submit.prevent="submitData">
+
+            <div class="form-group">
+                <textarea name="tweet" id="tweet" cols="30" rows="5"
+                    v-model="tweet"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Tweet</button>
+
+        </form>
+
+        <!-- Alert the user-->
+        <div class="my-3">
+            <span v-if="tweet.length < max_length">
+                {{ `Max: ${tweet.length} of ${max_length} characters` }}
+            </span>
+            <span v-else class="alert alert-danger">
+                {{ `Max char limit reached! excess chars: ${max_length - tweet.length}` }}
+            </span>
+        </div>
+
+        <!-- Tweets message -->
+        <ul>
+            <li v-for="tweet in tweets">
+                {{ tweet }}
+            </li>
+        </ul>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>

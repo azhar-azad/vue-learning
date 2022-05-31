@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js Instance</title>
+    <!-- VueJS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!--    <script type="text/javascript" src="vue.js"></script>-->
+</head>
+
+<body>
+    <h1>Vue Example</h1>
+    <div id="app">
+
+<!--        v-bind directive on HTML attributes-->
+        <div v-bind:class="dynamicClass" v-bind:id="dynamicId">
+            Dynamically assign a class and an id to the div
+        </div>
+
+<!--         v-bind with Boolean values -->
+        <button v-bind:disabled="disabled">You can't click it</button>
+        <br>
+
+<!--        dynamic arguments in vue -->
+        <a v-bind:[attribute_name]="url">Google it</a>
+        <br>
+
+<!--        dynamic events in vue -->
+        <a v-on:[event_name]="runFunction">Click it for a print in console</a>
+        <br>
+
+        {{ getFullName() }}
+    </div>
+
+    <script src="./main.js"></script>
+    <script>
+      // Access the alert property in the data object
+      console.log(app.alert)
+      // update a data property value
+      app.alert = "I am a new alert message"
+      console.log(app.alert)
+      console.log(app.projects)
+
+      // Access the entrie data object
+      console.log(app._data)
+      console.log(app.$data)
+
+
+
+    </script>
+</body>
+
+</html>
