@@ -1,12 +1,12 @@
 <script setup>
-import TaskListCreator from '../components/TaskList/TaskListCreator.vue';
+import Creator from '../components/Creator.vue';
 
 </script>
 
 <template>
   <main>
     <h1>Create Task List</h1>
-    <TaskListCreator />
+    <Creator creatorType="taskList" />
   </main>
 </template>
 
