@@ -1,12 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import TodosView from '../views/TodosView.vue'
+import ListView from '../views/ListView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'todoLists',
+      component: ListView
+    },
+    {
+      path: '/todos',
+      name: 'todos',
       component: TodosView
     },
     {

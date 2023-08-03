@@ -2,14 +2,14 @@
 import { Icon } from '@iconify/vue';
 
 const props = defineProps({
-    todo: {
-        type: Object,
-        required: true
-    },
-    index: {
-        type: Number,
-        required: true
-    }
+  todo: {
+      type: Object,
+      required: true
+  },
+  index: {
+      type: Number,
+      required: true
+  }
 });
 
 defineEmits(['toggle-complete', 'edit-todo', 'update-todo', 'delete-todo']);

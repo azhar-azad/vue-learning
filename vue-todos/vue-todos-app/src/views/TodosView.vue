@@ -35,9 +35,10 @@ const fetchTodoList = () => {
 
 fetchTodoList();
 
-const createTodo = (todo) => {
+const createTodo = (todo, parentUid) => {
   todoList.value.push({
     id: uid(),
+    parentId: parentUid,
     todo,
     isCompleted: null,
     isEditing: null
