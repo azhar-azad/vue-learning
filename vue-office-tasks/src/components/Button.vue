@@ -3,10 +3,10 @@
 </script>
 
 <template>
-    <button>
-        <!-- default value -->
-        <slot>Create</slot>
-    </button>
+  <button>
+    <!-- default value -->
+    <slot>Create</slot>
+  </button>
 </template>
 
 <style lang="scss" scoped>
