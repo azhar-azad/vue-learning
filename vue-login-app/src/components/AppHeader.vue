@@ -8,11 +8,13 @@ import { RouterLink } from 'vue-router';
         <nav class="container">
             <div class="branding">
                 <img src="../assets/Vue_Logo_Black.png" alt="App Logo">
-                <h1>Secured Tasks</h1>
+                <h1>Secure Tasks</h1>
             </div>
             <div class="nav-routes">
-                <RouterLink to="/">Tasks</RouterLink>
+                <RouterLink to="/tasks">Tasks</RouterLink>
                 <RouterLink to="/about">About</RouterLink>
+                <RouterLink to="/login">Login</RouterLink>
+                <RouterLink to="/logout">Logout</RouterLink>
             </div>
         </nav>
     </header>
